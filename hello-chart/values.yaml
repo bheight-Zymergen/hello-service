@@ -1,0 +1,16 @@
+# Default values for hello-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: lasko/hello-service
+  tag: 0.1.1
+  pullPolicy: IfNotPresent
+
+service:
+  name: hello-service
+  type: NodePort
+  externalPort: 8080
+  internalPort: 8080
